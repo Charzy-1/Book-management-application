@@ -1,3 +1,5 @@
+/* eslint-disable max-classes-per-file */
+
 // Class representing a Book with title and author properties
 class Book {
   constructor(title, author) {
