@@ -1,4 +1,4 @@
-# Book Management APpplication
+# Book Management Application
 <a name="readme-top"></a>
 <!-- TABLE OF CONTENTS -->
 
