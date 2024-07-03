@@ -48,8 +48,6 @@ a {
 
 .navMenu {
   display: flex;
-
-  /* justify-content: space-between; */
   align-items: center;
   margin-right: 100px;
   gap: 60px;

@@ -1,4 +1,5 @@
 /* eslint-disable max-classes-per-file */
+<<<<<<< HEAD
 const hamburger = document.querySelector('.hamburger');
 const navmenu = document.querySelector('.navMenu');
 
@@ -13,6 +14,8 @@ document.querySelectorAll('.navLink').forEach((n) => n.addEventListener('click',
 }));
 
 /* eslint-disable max-classes-per-file */
+=======
+>>>>>>> main
 
 // Class representing a Book with title and author properties
 class Book {
@@ -28,8 +31,12 @@ class BookManager {
     // Load books from localStorage, if available
     this.books = JSON.parse(localStorage.getItem('books')) || [];
     this.bookListElement = document.getElementById('book-list'); // Reference to the HTML element where the book list will be displayed
+<<<<<<< HEAD
     this.dialogueBox = document.getElementById('dialogue-box'); // Reference to the dialogue box for empty list message
     if (this.bookListElement) this.render(); // Initial render to display any saved books
+=======
+    this.render(); // Initial render to display any saved books
+>>>>>>> main
   }
 
   // Method to add a book to the list and render the updated list
@@ -45,6 +52,7 @@ class BookManager {
     this.saveBooks();
     this.render(); // Call render to update the book list display
   }
+<<<<<<< HEAD
 
   saveBooks() {
     // Save the current list of books to localStorage
@@ -73,6 +81,27 @@ class BookManager {
                 `; // Set the inner HTML to display the book's title, author, and a remove button
         this.bookListElement.appendChild(bookItem); // Append the book item to the book list element
       }
+=======
+
+  saveBooks() {
+    // Save the current list of books to localStorage
+    localStorage.setItem('books', JSON.stringify(this.books));
+  }
+
+  // Method to render the book list
+  render() {
+    this.bookListElement.innerHTML = ''; // Clear the current content of the book list element
+    // Loop through the books array using a for loop
+    for (let index = 0; index < this.books.length; index += 1) {
+      const book = this.books[index]; // Get the current book
+      const bookItem = document.createElement('div'); // Create a new div element for the book item
+      bookItem.className = 'book-item'; // Set the class for styling
+      bookItem.innerHTML = `
+        <span>${book.title} by: ${book.author}</span>
+        <button onclick="bookManager.removeBook(${index})">Remove</button>
+      `; // Set the inner HTML to display the book's title, author, and a remove button
+      this.bookListElement.appendChild(bookItem); // Append the book item to the book list element
+>>>>>>> main
     }
   }
 }
@@ -80,6 +109,7 @@ class BookManager {
 // Initialize BookManager on the home page
 const bookManager = new BookManager();
 
+<<<<<<< HEAD
 // Add an event listener to the book form on the add book page to handle form submission
 const bookForm = document.getElementById('book-form');
 if (bookForm) {
@@ -92,3 +122,14 @@ if (bookForm) {
     this.reset(); // Reset the form fields
   });
 }
+=======
+// Add an event listener to the book form to handle form submission
+document.getElementById('book-form').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+  const title = document.getElementById('title').value; // Get the value of the title input field
+  const author = document.getElementById('author').value; // Get the value of the author input field
+  const newBook = new Book(title, author); // Cr8 new Book instans wit d provided title and author
+  bookManager.addBook(newBook); // Add the new book to the book manager
+  this.reset(); // Reset the form fields
+});
+>>>>>>> main
