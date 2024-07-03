@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class-based-book-manager</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Add Book - Book Manager</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -14,13 +14,13 @@
             </div></a> 
             <ul class="navMenu">
                 <li class="navItems">
-                    <a href="index.html" class="navLink">List</a>
+                    <a href="/" class="navLink">List</a>
                 </li>
                 <li class="navItems">
                     <h1>|</h1>
                 </li>
                 <li class="navItems">
-                    <a href="./add-book.html" class="navLink">Add new</a>
+                    <a href="" class="navLink">Add new</a>
                 </li>
                 <li class="navItems">
                     <h1>|</h1>
@@ -39,17 +39,18 @@
     </header>
     
     <div class="container">
-        <h1>All awesome books</h1>
-        <div class="book-list" id="book-list"></div>
-        <div class="dialogue-box" id="dialogue-box" style="display: none;">
-            No books have been added yet.
-        </div>
-        <a href="add-book.html" class="special-link">Add a New Book</a>
+        <h1>Add a New Book</h1>
+        <form id="book-form">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <button type="submit">Add Book</button>
+        </form>
+        <a href="index.html" class="special-link">Back to Book List</a>
     </div>
 
     <footer>
         <h2>Copyrights...</h2>
     </footer>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
