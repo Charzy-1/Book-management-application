@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class-based-book-manager</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Add Book - Book Manager</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Margarine&display=swap" rel="stylesheet">
@@ -18,13 +17,13 @@
             </div></a> 
             <ul class="navMenu">
                 <li class="navItems">
-                    <a href="index.html" class="navLink">List</a>
+                    <a href="/" class="navLink">List</a>
                 </li>
                 <li class="navItems">
                     <h1>|</h1>
                 </li>
                 <li class="navItems">
-                    <a href="./add-book.html" class="navLink">Add new</a>
+                    <a href="" class="navLink">Add new</a>
                 </li>
                 <li class="navItems">
                     <h1>|</h1>
@@ -41,19 +40,20 @@
             </div>
         </nav>
     </header>
-    
+
     <div class="container">
         <h3 class="indexPage-containerh3">July 5th 2024, 10:53:25 AM</h3>
-        <h1>All awesome books</h1>
-        <div class="book-list" id="book-list"></div>
-        <div class="dialogue-box" id="dialogue-box">
-            No books have been added yet.
-        </div>
+        <h1>Add a New Book</h1>
+        <form id="book-form">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <button type="submit">Add Book</button>
+        </form>
     </div>
 
     <footer>
         <h2>Copyrights...</h2>
     </footer>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
