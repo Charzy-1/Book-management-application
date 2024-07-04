@@ -6,16 +6,13 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
     margin: 0;
 }
 
 header {
-    background-color: #524c42;
-    margin-top: 0;
     position: fixed;
     width: 100vw;
-    z-index: 100;
+
   }
   
   li {
@@ -23,7 +20,7 @@ header {
   }
   
   a {
-    color: white;
+    color: black;
     text-decoration: none;
   }
   
@@ -33,29 +30,22 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    border: 3px solid black;
+    z-index: 100;
+    background-color: white;
   }
   
   .logo {
     margin-left: 100px;
-    color: white;
     font-size: 15px;
-  }
-  
-  .logo img {
-    width: 11vw;
-    margin-left: 80px;
   }
   
   .navMenu {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     margin-right: 100px;
     gap: 60px;
-  }
-
-  .navItems h1 {
-    color: white;
   }
   
   .navLink {
@@ -78,13 +68,13 @@ header {
     margin: 5px 20px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: white;
+    background-color: black;
   }
 
 .container {
+  font-family: "Margarine", sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #fff;
@@ -93,53 +83,95 @@ header {
     border-radius: 5px;
 }
 
-.container a {
-    color: blue;
-    text-decoration: underline;
+.container h1{
+margin-bottom: 40px;
 }
+
+.indexPage-containerh3 {
+  font-family: "Margarine", sans-serif;
+  margin: 5rem 5rem 8rem;
+  align-self: flex-end;
+  font-size: 15px; 
+}
+
 .book-list {
   margin: 20px 0;
 }
+
 .book-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
+  padding: 10px; 
+  display: flex; 
+  justify-content: space-between; /* Space out the book details and remove button */
+  align-items: center; /* Align items vertically */
+  margin: 0; /* No margin between book items */
+  width: 90vw;
 }
+
+.outer-container {
+  border: 3px solid black; /* Single outer border */
+  width: fit-content; /* Adjust to fit the content */
+  padding: 0; /* No padding inside the outer container */
+}
+
 .book-item button {
-    background-color: #e74c3c;
-    color: white;
+    background-color: white;
+    color: black;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
     margin-left: 10px;
+    border: 3px solid black;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    height: 2rem;
 }
 
-#book-form{
+#book-form {
     margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+ #book-form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 3px solid black;
+    border-radius: 3px;
 }
 
 #title, #author {
-    margin: 5px 0;
+    margin: 10px 0;
     border-radius: 0;
+    width: 50vw;
+    height: 8vh;
+}
+
+#book-form button {
+  width: 10vw;
+  height: 5vh;
+  margin-top: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  border: 3px solid black;
+  align-self: flex-end;
+  cursor: pointer;
 }
 
 
 footer {
-  font-size: 15px;
+  font-size: 10px;
   padding: 15px;
-  background-color: #524c42;
-  color: white;
+  color: black;
+  margin: 10px;
+  border: 3px solid black;
 }
 
-footer h2 {
-  margin-left: 80px;
+footer h2{
+ margin-left: 80px;
 }
 
 .container-items h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .container-items ul {
@@ -180,7 +212,7 @@ footer h2 {
   .navMenu {
     position: fixed;
     left: -100%;
-    top: 70px;
+    top: 90px;
     gap: 0;
     flex-direction: column;
     background-color: #524c42;
@@ -202,6 +234,10 @@ footer h2 {
     font-size: 25px;
   }
 
+  a {
+    color: white;
+  }
+
   .navItems h1 {
     display: none;
   }
@@ -210,17 +246,28 @@ footer h2 {
     margin: 10px 0;
     text-align: center;
   }
-  
-  footer h2 {
-    margin: 0;
-    text-align: center;
-  }
 
+  #book-form button {
+    width: 20vw;
+  }
+  
+  .book-item {
+    width: 80vw;
 }
 
-@media (max-width: 376px) {
-  #book-form {
-    margin: 10px 53px;
-    text-align: center;
+  #title, #author {
+    margin: 10px 0;
+    border-radius: 0;
+    width: 80vw;
   }
+
+  .indexPage-containerh3 {
+    margin: 5rem 0 8rem;
+  }
+
+  footer h2{
+    margin-left: 0;
+   }
+
+
 }
