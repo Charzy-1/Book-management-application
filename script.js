@@ -82,7 +82,7 @@ class BookManager {
         outerContainer.appendChild(bookItem); // Append the book item to the outer container
       }
 
-      this.bookListElement.appendChild(outerContainer); // Append the outer container to the book list element
+      this.bookListElement.appendChild(outerContainer); // Apend d outa contana 2 d book lst element
     }
   }
 }
@@ -97,7 +97,7 @@ if (bookForm) {
     event.preventDefault(); // Prevent the default form submission behavior
     const title = document.getElementById('title').value; // Get the value of the title input field
     const author = document.getElementById('author').value; // Get the value of the author input field
-    const newBook = new Book(title, author); // Create a new Book instance with the provided title and author
+    const newBook = new Book(title, author); // Cr8 a nw Buk instans wit d provided title and author
     bookManager.addBook(newBook); // Add the new book to the book manager
     this.reset(); // Reset the form fields
   });
